@@ -15,17 +15,17 @@ export const getProjects = graphql`
     projects: allContentfulProject {
       edges {
         node {
-          projectTitle
-          studentLevel
-          studentName
+          title: projectTitle
+          level: studentLevel
+          name: studentName
           id: contentful_id
-          shortDescription {
+          desc: shortDescription {
             shortDescription
           }
           abstract {
             abstract
           }
-          projectMainImage {
+          mainImg: projectMainImage {
             fluid {
               ...GatsbyContentfulFluid_withWebp
             }
